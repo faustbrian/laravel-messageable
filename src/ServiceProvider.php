@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace PreemStudio\Messageable;
 
-use Spatie\LaravelPackageTools\Commands\InstallCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use PreemStudio\Jetpack\Package\AbstractServiceProvider;
+use PreemStudio\Jetpack\Package\Package;
 
-class ServiceProvider extends PackageServiceProvider
+class ServiceProvider extends AbstractServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,7 +15,6 @@ class ServiceProvider extends PackageServiceProvider
             ->name('laravel-messageable')
             ->hasMigration('create_participants_table')
             ->hasMigration('create_messages_table')
-            ->hasMigration('create_threads_table')
-            ->hasInstallCommand(fn (InstallCommand $command) => $command->publishMigrations());
+            ->hasMigration('create_threads_table');
     }
 }

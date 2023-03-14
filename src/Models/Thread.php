@@ -15,11 +15,11 @@ final class Thread extends Model
 {
     use SoftDeletes;
 
-    protected string $table = 'threads';
+    protected $table = 'threads';
 
-    protected array $guarded = ['id', 'created_at', 'updated_at'];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    protected array $dates = ['created_at', 'updated_at', 'deleted_at'];
+    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     public function messages(): HasMany
     {

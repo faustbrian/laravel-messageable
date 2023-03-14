@@ -13,11 +13,11 @@ final class Participant extends Model
 {
     use SoftDeletes;
 
-    protected string $table = 'participants';
+    protected $table = 'participants';
 
-    protected array $guarded = ['id', 'created_at', 'updated_at'];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    protected array $dates = ['created_at', 'updated_at', 'deleted_at', 'last_read'];
+    protected $dates = ['created_at', 'updated_at', 'deleted_at', 'last_read'];
 
     public function thread(): BelongsTo
     {

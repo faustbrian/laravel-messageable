@@ -1,54 +1,46 @@
-# Laravel Messageable
+<p align="center">
+    <a href="https://preem.studio" target="_blank">
+        <img src="https://raw.githubusercontent.com/PreemStudio/assets/main/logo-text.svg" width="400" alt="Preem Studio Logo" />
+    </a>
+</p>
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/preemstudio/laravel-messageable.svg?style=flat-square)](https://packagist.org/packages/preemstudio/laravel-messageable)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/preemstudio/laravel-messageable/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/preemstudio/laravel-messageable/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/preemstudio/laravel-messageable/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/preemstudio/laravel-messageable/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/preemstudio/laravel-messageable.svg?style=flat-square)](https://packagist.org/packages/preemstudio/laravel-messageable)
+<p align="center">
+    <a href="https://github.com/PreemStudio/laravel-messageable/actions">
+        <img src="https://badge.sh/github/check-runs/PreemStudio/laravel-messageable" alt="Checks" />
+    </a>
+    <a href="https://packagist.org/packages/preemstudio/laravel-messageable">
+        <img src="https://badge.sh/packagist/downloads/PreemStudio/laravel-messageable" alt="Downloads" />
+    </a>
+    <a href="https://packagist.org/packages/preemstudio/laravel-messageable">
+        <img src="https://badge.sh/packagist/version/PreemStudio/laravel-messageable" alt="Version" />
+    </a>
+    <a href="https://packagist.org/packages/preemstudio/laravel-messageable">
+        <img src="https://badge.sh/packagist/license/PreemStudio/laravel-messageable" alt="License" />
+    </a>
+</p>
 
-A package to easily use messaging functionality with Laravel.
+## About Laravel Messageable
+
+This project was created by, and is maintained by [Preem Studio](https://github.com/PreemStudio), and is a package to easily use messaging functionality with [Laravel](https://laravel.com/). Be sure to browse through the [changelog](CHANGELOG.md), [code of conduct](.github/CODE_OF_CONDUCT.md), [contribution guidelines](.github/CONTRIBUTING.md), [license](LICENSE), and [security policy](.github/SECURITY.md).
 
 ## Installation
 
-You can install the package via composer:
+> **Note**
+> This package requires [PHP](https://www.php.net/) 8.2 or later, and it supports [Laravel](https://laravel.com/) 10 or later.
+
+To get the latest version, simply require the project using [Composer](https://getcomposer.org/):
 
 ```bash
-composer require preemstudio/laravel-messageable
+$ composer require preemstudio/laravel-messageable
 ```
 
-You can publish and run the migrations with:
+You can publish the migrations by using:
 
 ```bash
-php artisan vendor:publish --tag="laravel-messageable-migrations"
+$ php artisan vendor:publish --tag="laravel-messageable-migrations"
 php artisan migrate
 ```
 
 ## Usage
 
-Check our [test suite](/tests) for usage examples.
-
-## Testing
-
-```bash
-composer test
-```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-If you've found a bug regarding security please mail [security@preem.studio](mailto:security@preem.studio) instead of using the issue tracker.
-
-## Credits
-
-- [Preem Studio](https://github.com/PreemStudio)
-- [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+Please review the contents of [our test suite](/tests) for detailed usage examples.

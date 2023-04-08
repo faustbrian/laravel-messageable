@@ -1,0 +1,196 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to an undefined property PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:\\$participant_id\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Access to an undefined property PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:\\$participant_type\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:creator\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:participants\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:recipients\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:recipients\\(\\) should return Illuminate\\\\Support\\\\Collection but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<PreemStudio\\\\Messageable\\\\Models\\\\Participant\\>\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:thread\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Property 'participant_id' does not exist in PreemStudio\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Property 'participant_type' does not exist in PreemStudio\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Property PreemStudio\\\\Messageable\\\\Models\\\\Message\\:\\:\\$dates has no type specified\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Participant\\:\\:model\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Participant.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Participant\\:\\:thread\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Participant.php
+
+		-
+			message: "#^Property PreemStudio\\\\Messageable\\\\Models\\\\Participant\\:\\:\\$dates has no type specified\\.$#"
+			count: 1
+			path: src/Models/Participant.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$id\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Access to an undefined property PreemStudio\\\\Messageable\\\\Models\\\\Participant\\:\\:\\$last_read\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Access to an undefined property PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:\\$updated_at\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<PreemStudio\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:lists\\(\\)\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Cannot access property \\$creator on PreemStudio\\\\Messageable\\\\Models\\\\Message\\|null\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Cannot call method restore\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:addMessage\\(\\) has parameter \\$data with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:getAllLatest\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:getAllLatest\\(\\) should return Illuminate\\\\Support\\\\Collection but returns Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<PreemStudio\\\\Messageable\\\\Models\\\\Thread\\>\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:getLatestMessage\\(\\) should return PreemStudio\\\\Messageable\\\\Models\\\\Message but returns PreemStudio\\\\Messageable\\\\Models\\\\Message\\|null\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:getParticipantFromModel\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:hasParticipant\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:isUnread\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:markAsRead\\(\\) has parameter \\$userId with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:messages\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:participants\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:participantsIdsAndTypes\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModel\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModel\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModel\\(\\) has parameter \\$query with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModelWithNewMessages\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModelWithNewMessages\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModelWithNewMessages\\(\\) has parameter \\$query with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Property 'participant_id' does not exist in PreemStudio\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Property 'participant_type' does not exist in PreemStudio\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Property PreemStudio\\\\Messageable\\\\Models\\\\Thread\\:\\:\\$dates has no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php

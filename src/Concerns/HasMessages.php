@@ -24,18 +24,18 @@ trait HasMessages
 
     public function newMessagesCount(): int
     {
-        return count($this->threadsWithNewMessages());
+        return \count($this->threadsWithNewMessages());
     }
 
     public function threadsWithNewMessages(): array
     {
         $threadsWithNewMessages = [];
-        $participants           = Participant::where('participant_id', $this->id)
-                                    ->where('participant_type', get_class($this))
-                                    ->lists('last_read', 'thread_id');
+        $participants = Participant::where('participant_id', $this->id)
+            ->where('participant_type', \get_class($this))
+            ->lists('last_read', 'thread_id');
 
         if ($participants) {
-            $threads = Thread::whereIn('id', array_keys($participants->toArray()))->get();
+            $threads = Thread::whereIn('id', \array_keys($participants->toArray()))->get();
 
             foreach ($threads as $thread) {
                 if ($thread->updated_at > $participants[$thread->id]) {

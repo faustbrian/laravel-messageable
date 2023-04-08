@@ -41,7 +41,7 @@ final class Message extends Model
     public function recipients(): Collection
     {
         return $this->participants()
-                    ->where('participant_id', '!=', $this->participant_id)
-                    ->where('participant_type', '!=', $this->participant_type);
+            ->where('participant_id', '!=', $this->participant_id)
+            ->where('participant_type', '!=', $this->participant_type);
     }
 }

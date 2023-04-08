@@ -43,14 +43,14 @@ final class Thread extends Model
 
     public static function getAllLatest(): Collection
     {
-        return static::latest('updated_at');
+        return self::latest('updated_at');
     }
 
     public function participantsIdsAndTypes($participant = null): array
     {
         $participants = $this->participants()
-                             ->withTrashed()
-                             ->lists('participant_id', 'participant_type');
+            ->withTrashed()
+            ->lists('participant_id', 'participant_type');
 
         if ($participant) {
             $participants[] = $participant;
@@ -63,7 +63,7 @@ final class Thread extends Model
     {
         return $query->join('participants', 'threads.id', '=', 'participants.thread_id')
             ->where('participants.participant_id', $participant->id)
-            ->where('participants.participant_type', get_class($participant))
+            ->where('participants.participant_type', $participant::class)
             ->where('participants.deleted_at', null)
             ->select('threads.*');
     }
@@ -72,20 +72,20 @@ final class Thread extends Model
     {
         return $query->join('participants', 'threads.id', '=', 'participants.thread_id')
             ->where('participants.participant_id', $participant->id)
-            ->where('participants.participant_type', get_class($participant))
+            ->where('participants.participant_type', $participant::class)
             ->whereNull('participants.deleted_at')
-            ->where(function ($query) {
+            ->where(function ($query): void {
                 $query->where('threads.updated_at', '>', 'participants.last_read')
-                      ->orWhereNull('participants.last_read');
+                    ->orWhereNull('participants.last_read');
             })
             ->select('threads.*');
     }
 
     public function addMessage($data, Model $creator): bool
     {
-        $message = (new Message)->fill(array_merge($data, [
-            'creator_id'   => $creator->id,
-            'creator_type' => get_class($creator),
+        $message = (new Message())->fill(\array_merge($data, [
+            'creator_id' => $creator->id,
+            'creator_type' => $creator::class,
         ]));
 
         return (bool) $this->messages()->save($message);
@@ -100,16 +100,16 @@ final class Thread extends Model
 
     public function addParticipant(Model $participant): bool
     {
-        $participant = (new Participant)->fill([
-            'participant_id'   => $participant->id,
-            'participant_type' => get_class($participant),
-            'last_read'        => new Carbon,
+        $participant = (new Participant())->fill([
+            'participant_id' => $participant->id,
+            'participant_type' => $participant::class,
+            'last_read' => new Carbon(),
         ]);
 
         return (bool) $this->participants()->save($participant);
     }
 
-    public function addParticipants(array $participants)
+    public function addParticipants(array $participants): void
     {
         foreach ($participants as $participant) {
             $this->addParticipant($participant);
@@ -119,8 +119,8 @@ final class Thread extends Model
     public function markAsRead($userId): bool
     {
         try {
-            $participant            = $this->getParticipantFromModel($userId);
-            $participant->last_read = new Carbon;
+            $participant = $this->getParticipantFromModel($userId);
+            $participant->last_read = new Carbon();
             $participant->save();
 
             return true;
@@ -147,12 +147,12 @@ final class Thread extends Model
     public function getParticipantFromModel($participant): Participant
     {
         return $this->participants()
-                    ->where('participant_id', $participant->id)
-                    ->where('participant_type', get_class($participant))
-                    ->firstOrFail();
+            ->where('participant_id', $participant->id)
+            ->where('participant_type', $participant::class)
+            ->firstOrFail();
     }
 
-    public function activateAllParticipants()
+    public function activateAllParticipants(): void
     {
         foreach ($this->participants()->withTrashed()->cursor() as $participant) {
             $participant->restore();
@@ -162,8 +162,8 @@ final class Thread extends Model
     public function hasParticipant($participant): bool
     {
         return $this->participants()
-                    ->where('participant_id', '=', $participant->id)
-                    ->where('participant_type', '=', get_class($participant))
-                    ->count() > 0;
+            ->where('participant_id', '=', $participant->id)
+            ->where('participant_type', '=', $participant::class)
+            ->count() > 0;
     }
 }

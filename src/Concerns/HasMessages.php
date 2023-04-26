@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace BombenProdukt\Messageable\Concerns;
 
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use BombenProdukt\Messageable\Models\Message;
 use BombenProdukt\Messageable\Models\Participant;
 use BombenProdukt\Messageable\Models\Thread;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasMessages
 {

@@ -21,6 +21,11 @@ final class Thread extends Model
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
+    public static function getAllLatest(): Collection
+    {
+        return self::latest('updated_at');
+    }
+
     public function messages(): HasMany
     {
         return $this->hasMany(Message::class);
@@ -39,11 +44,6 @@ final class Thread extends Model
     public function getLatestMessage(): Message
     {
         return $this->messages()->latest()->first();
-    }
-
-    public static function getAllLatest(): Collection
-    {
-        return self::latest('updated_at');
     }
 
     public function participantsIdsAndTypes($participant = null): array

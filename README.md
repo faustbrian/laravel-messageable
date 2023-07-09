@@ -4,20 +4,6 @@
     </a>
 </p>
 
-<p align="center">
-    <a href="https://github.com/faustbrian/laravel-messageable/actions">
-        <img src="https://badge.sh/github/check-runs/BombenProdukt/laravel-messageable" alt="Checks" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/laravel-messageable">
-        <img src="https://badge.sh/packagist/downloads/BombenProdukt/laravel-messageable" alt="Downloads" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/laravel-messageable">
-        <img src="https://badge.sh/packagist/version/BombenProdukt/laravel-messageable" alt="Version" />
-    </a>
-    <a href="https://packagist.org/packages/bombenprodukt/laravel-messageable">
-        <img src="https://badge.sh/packagist/license/BombenProdukt/laravel-messageable" alt="License" />
-    </a>
-</p>
 
 ## About Laravel Messageable
 

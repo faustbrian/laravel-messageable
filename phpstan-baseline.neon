@@ -1,0 +1,241 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to an undefined property BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:\\$participant_id\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Access to an undefined property BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:\\$participant_type\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:where\\(\\)\\.$#"
+			count: 2
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:creator\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:participants\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:recipients\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:recipients\\(\\) should return Illuminate\\\\Support\\\\Collection but returns Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:thread\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Property 'participant_id' does not exist in BombenProdukt\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Property 'participant_type' does not exist in BombenProdukt\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Messageable\\\\Models\\\\Message\\:\\:\\$dates has no type specified\\.$#"
+			count: 1
+			path: src/Models/Message.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\:\\:model\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\MorphTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Participant.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\:\\:thread\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\BelongsTo does not specify its types\\: TRelatedModel, TChildModel$#"
+			count: 1
+			path: src/Models/Participant.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\:\\:\\$dates has no type specified\\.$#"
+			count: 1
+			path: src/Models/Participant.php
+
+		-
+			message: "#^Access to an undefined property BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\:\\:\\$last_read\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Access to an undefined property BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:\\$updated_at\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$id\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:lists\\(\\)\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Cannot access property \\$creator on BombenProdukt\\\\Messageable\\\\Models\\\\Message\\|null\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Cannot call method restore\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Message\\>\\:\\:first\\(\\)\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Message\\>\\:\\:latest\\(\\)\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Message\\>\\:\\:oldest\\(\\)\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:count\\(\\)\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:cursor\\(\\)\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:firstOrFail\\(\\)\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:where\\(\\)\\.$#"
+			count: 4
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Dynamic call to static method Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany\\<BombenProdukt\\\\Messageable\\\\Models\\\\Participant\\>\\:\\:withTrashed\\(\\)\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:addMessage\\(\\) has parameter \\$data with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:getAllLatest\\(\\) return type with generic class Illuminate\\\\Support\\\\Collection does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:getAllLatest\\(\\) should return Illuminate\\\\Support\\\\Collection but returns Illuminate\\\\Database\\\\Eloquent\\\\Builder\\<BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\>\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:getLatestMessage\\(\\) should return BombenProdukt\\\\Messageable\\\\Models\\\\Message but returns BombenProdukt\\\\Messageable\\\\Models\\\\Message\\|null\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:getParticipantFromModel\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:hasParticipant\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:isUnread\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:markAsRead\\(\\) has parameter \\$userId with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:messages\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:participants\\(\\) return type with generic class Illuminate\\\\Database\\\\Eloquent\\\\Relations\\\\HasMany does not specify its types\\: TRelatedModel$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:participantsIdsAndTypes\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModel\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModel\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModel\\(\\) has parameter \\$query with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModelWithNewMessages\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModelWithNewMessages\\(\\) has parameter \\$participant with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Method BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:scopeForModelWithNewMessages\\(\\) has parameter \\$query with no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Property 'participant_id' does not exist in BombenProdukt\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Property 'participant_type' does not exist in BombenProdukt\\\\Messageable\\\\Models\\\\Participant model\\.$#"
+			count: 2
+			path: src/Models/Thread.php
+
+		-
+			message: "#^Property BombenProdukt\\\\Messageable\\\\Models\\\\Thread\\:\\:\\$dates has no type specified\\.$#"
+			count: 1
+			path: src/Models/Thread.php
